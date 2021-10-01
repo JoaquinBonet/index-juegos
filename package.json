@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "material-design-icons": "^3.0.1"
+  },
+  "devDependencies": {
+    "cypress": "^8.5.0"
+  }
+}
