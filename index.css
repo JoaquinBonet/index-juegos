@@ -1,5 +1,10 @@
+html{
+    max-width: 100vw !important;
+    height: 100vh;
+}
+
 body {
-    max-width: 100vw;
+
     background: #2980b9;
     background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
     background: linear-gradient(to right, #2c3e50, #2980b9);
@@ -38,6 +43,7 @@ p {
     margin-top: 5%;
     margin-bottom: 5%;
     align-items: center;
+
 }
 
 #row1{
