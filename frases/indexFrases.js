@@ -92,24 +92,43 @@ const manejarClick = (event) => {
 
     let clickeado = event.target;
     if (!clickeado.src.includes(imgDeFrase.substring(1))) {
-        error.innerText = parseInt(error.innerText) + 1;
+        imgEquivocada(clickeado);
         if (error.innerText == 3) {
             perder();
         } else {
-            mostrarPregunta();
-            mostrarImagenes();
+            setTimeout(() => {
+                mostrarPregunta();
+                mostrarImagenes();
+            }, 1500);
         }
 
     } else {
         if (frases.length == 0) {
             ganar()
         } else {
+            imgAcertada(clickeado);
             frases.splice(nroRandom, 1);
             imgsRestantesPorAcertar.splice(nroRandom, 1);
-            mostrarPregunta();
-            mostrarImagenes();
+            setTimeout(() => {
+                mostrarPregunta();
+                mostrarImagenes();
+            }, 1500);
+
         }
     }
+}
+
+const imgEquivocada = (img) => {
+    img.className = "equivocado";
+    error.innerText = parseInt(error.innerText) + 1;
+    setTimeout(() => { img.className = "" }, 1500);
+
+}
+
+const imgAcertada = (img) => {
+    img.className = "correcto";
+    setTimeout(() => { img.className = "" }, 1500);
+
 }
 
 const ganar = () => {

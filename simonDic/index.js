@@ -5,12 +5,13 @@ const tablero = document.querySelector("#tablero");
 const nroRonda = document.querySelector("#ronda");
 const victoria = document.querySelector("#victoria");
 const tiempo = document.querySelector("#tiempo");
+let intervalo;
 
 
 $empezar.onclick = function () {
     tablero.className = "container";
     turnoMaquina();
-    setInterval(contarTiempo, 1000);
+    intervalo = setInterval(contarTiempo, 1000);
     $empezar.className = "oculto";
 
 
@@ -102,8 +103,9 @@ const perder = () => {
 }
 
 const ganar = () => {
-    victoria.innerText = `Ganaste, crack!`;
+    victoria.innerText = `Ganaste, crack! Tiempo total: ${tiempo.innerHTML}.`;
     document.querySelector("#ganar").play();
+    frenarTiempo();
     tablero.className = "oculto";
     victoria.className = "";
     tiempo.className = "oculto";
@@ -120,13 +122,14 @@ const contarTiempo = () => {
     minutos = Math.floor(segundos / 60);
     totalSegundos = (segundos % 60);
 
-
-
     tiempo.innerText = "Tiempo: " + (horas < 10 ? "0" + horas : horas) + ":"
         + (minutos < 10 ? "0" + minutos : minutos) + ":"
         + (totalSegundos < 10 ? "0" + totalSegundos : totalSegundos);
 
 
+}
+const frenarTiempo = () => {
+    clearInterval(intervalo)
 }
 
 

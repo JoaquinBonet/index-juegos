@@ -51,10 +51,43 @@ button {
 img {
     max-width: 100%;
     max-height: 100%;
+    border-radius: 6%;
 }
 
 .oculto {
     display: none;
+}
+
+.correcto {
+    animation: correcto 1.5s ease-in;
+}
+
+.equivocado {
+    animation: equivocado 1.5s ease-in;
+}
+
+@keyframes correcto {
+    0% {
+        filter: drop-shadow(1px 1px 1px #26e918);
+    }
+    50% {
+        filter: drop-shadow(36px 10px 64px #26e918);
+    }
+    100% {
+        filter: drop-shadow(1px 1px 1px #26e918);
+    }
+}
+
+@keyframes equivocado {
+    0% {
+        filter: drop-shadow(1px 1px 1px #e91818);
+    }
+    50% {
+        filter: drop-shadow(36px 10px 64px #e91818);
+    }
+    100% {
+        filter: drop-shadow(1px 1px 1px #e91818);
+    }
 }
 
 @media (max-width: 573px) {
@@ -66,7 +99,7 @@ img {
 
 @media (max-width: 463px) {
     #titulo {
-        font-size: 90%;
+        font-size: 1.025em
     }
     #pregunta {
         font-size: 2em

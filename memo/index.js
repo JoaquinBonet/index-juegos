@@ -2,13 +2,13 @@ const botonEmpezar = document.querySelector("#empezar");
 const intento = document.querySelector("#intento");
 const botonReset = document.querySelector("#reset");
 const $tiempo = document.getElementById("tiempo");
-//const dropdown = document.querySelector(".navbar-toggler");
 const tablero = document.querySelector("#tablero");
+let intervalo;
 
 botonEmpezar.onclick = function () {
     mostrarTarjetas();
     asginarImagenesATarjetas();
-    setInterval(iniciarTiempo, 1000);
+    intervalo = setInterval(iniciarTiempo, 1000);
 }
 
 let segundos = 0;
@@ -37,11 +37,19 @@ const asginarImagenesATarjetas = () => {
 
 
 const iniciarTiempo = () => {
-    segundos += 1;
-    $tiempo.innerText = segundos + " segundos";
 
+    segundos += 1;
+    horas = Math.floor(segundos / 3600);
+    segundos %= 3600;
+    minutos = Math.floor(segundos / 60);
+    totalSegundos = (segundos % 60);
+
+    tiempo.innerText = (horas < 10 ? "0" + horas : horas) + ":"
+        + (minutos < 10 ? "0" + minutos : minutos) + ":"
+        + (totalSegundos < 10 ? "0" + totalSegundos : totalSegundos);
 
 }
+
 
 
 
@@ -111,9 +119,10 @@ const encontrarMatch = () => {
 
 
 const ganar = () => {
+   
     if (document.querySelectorAll(".oculto").length === document.querySelectorAll(".flip-card").length) {
-        document.querySelector("#victoria").innerText = `Ganaste, felicitaciones! Te llevó ${intento.innerText} intentos.`;
-
+        document.querySelector("#victoria").innerText = `Ganaste, felicitaciones! Te llevó ${intento.innerText} intentos y tiempo: ${tiempo.innerText}.`;
+        frenarTiempo();
     }
 
 }
