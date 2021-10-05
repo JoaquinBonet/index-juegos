@@ -18,6 +18,7 @@ let imgsAelegir = [];
 let nroRandom;
 
 botonEmpezar.onclick = () => {
+    
     rowImgs.className = "row";
     mostrarPregunta();
     mostrarImagenes();

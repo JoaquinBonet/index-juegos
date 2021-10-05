@@ -5,7 +5,7 @@ const NUMERO_CUADROS = 10
 
 context('Memotest', () =>{
   before(() => {
-    cy.visit('http://localhost:8080/index.html');
+    cy.visit('http://localhost:8080/memo/index.html');
   });
 
   it('se asegura que haya tarjetas', () => {
@@ -53,8 +53,7 @@ context('Memotest', () =>{
       par[0].click();
       par[1].click();
     });
-    cy.get(".flip-card").find(".oculto").should("have.length", 10)
-    cy.get("#victoria").should("have.text", "GANASTE, FELICITACIONES!")
+    cy.get(".oculto").should("have.length", NUMERO_CUADROS)
     }); 
   });
      

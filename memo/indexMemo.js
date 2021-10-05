@@ -50,6 +50,11 @@ const iniciarTiempo = () => {
 
 }
 
+const frenarTiempo = () => {
+    clearInterval(intervalo)
+}
+
+
 
 
 
@@ -63,7 +68,7 @@ const sumarIntento = () => {
 const flip = (event) => {
 
 
-    var element = event.currentTarget
+    let element = event.currentTarget
     if (element.className === "flip-card-inner") {
         if (element.style.transform == "rotateY(180deg)") {
             element.style.transform = "rotateY(0deg)";
