@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="form.css">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon//favicon-16x16.png">
+  <link rel="manifest" href="./favicon//site.webmanifest">
   <title>Central de juegos</title>
 </head>
 
@@ -30,24 +33,23 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Juegos
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="./memo/index.html">Memotest</a></li>
-                <li><a class="dropdown-item" href="./simonDic/index.html">Simón dice</a></li>
-                <li><a class="dropdown-item" href="./frases/indexFrases.html">¿De quién es la frase?</a></li>
+                <li><a class="dropdown-item" href="./games/memo/indexMemo.html">Memotest</a></li>
+                <li><a class="dropdown-item" href="./games/simonDic/indexSimon.html">Simón dice</a></li>
+                <li><a class="dropdown-item" href="./games/frases/indexFrases.html">¿De quién es la frase?</a></li>
               </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#registro">Registrate</a>
             </li>
           </ul>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-
-              <a class="nav-link" href="#">Iniciar sesión <i class="material-icons mysize">perm_identity</i></a>
+          <ul class="navbar-nav ms-auto" >
+            <li class="nav-item" >
+              <a class="nav-link" href="#" id="logIn">Iniciar sesión <i class="material-icons mysize">perm_identity</i></a>
             </li>
           </ul>
         </div>
@@ -59,7 +61,7 @@
     <div class="container games">
       <div class="row" id="row1">
         <div class="col-sm-6">
-          <a href="./simonDic/index.html"><img src="./imgs/simon.png" alt="Simón dice"></a>
+          <a href="./games/simonDic/indexSimon.html"><img src="./imgs/simon.png" alt="Simón dice"></a>
         </div>
         <div class="col-sm-6">
           <h3 class="animate__animated animate__fadeInRight">Simón dice</h3>
@@ -77,14 +79,14 @@
             son distintas, el jugador pierde.</p>
         </div>
         <div class="col-sm-6">
-          <a href="./memo/index.html"><img src="./imgs/memo.png" alt="memotest"></a>
+          <a href="./games/memo/indexMemo.html"><img src="./imgs/memo.png" alt="memotest"></a>
         </div>
 
       </div>
 
       <div class="row" id="row3">
         <div class="col-sm-6">
-          <a href="./frases/indexFrases.html"><img src="./imgs/de quien.png" alt="frases"></a>
+          <a href="./games/frases/indexFrases.html"><img src="./imgs/de quien.png" alt="frases"></a>
         </div>
 
         <div class="col-sm-6">

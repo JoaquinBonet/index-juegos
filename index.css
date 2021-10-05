@@ -92,3 +92,11 @@ p {
 #footer_mail:hover {
     color: #2980b9;
 }
+
+#logIn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
