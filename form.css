@@ -40,12 +40,6 @@ input[type="submit"]:hover{
     background:#777;
 }
 
-input[type="datetime-local"]{
-    background: #bbb;
-    font-size: large;
-
-}
-
 input:focus{
     background: #bbb;
     color: #000;
